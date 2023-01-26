@@ -7,7 +7,7 @@ module.exports = function(req, res, next) {
             res.status(400)
             res.send('Token Not found');
         }
-        let verifyjwt = jwt.verify(token,'jwtSecret');
+        let verifyjwt = jwt.verify(token,'secret_key');
         req.user = verifyjwt.user
         next();
     }
