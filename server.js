@@ -2,6 +2,7 @@ const { response } = require("express");
 const express = require("express");
 const mongoose = require("mongoose");
 const RegisterUser = require("./mongodbmodel")
+const jwtmiddleware = require("./jwtmiddleware")
 const jwt = require('jsonwebtoken');
 const app = express();
 
